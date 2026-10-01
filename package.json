@@ -1,0 +1,17 @@
+{
+  "name": "websocket-permessage-deflate-negotiation",
+  "version": "0.1.0",
+  "description": "Parses and constructs the permessage-deflate extension offers and responses in the Sec-WebSocket-Extensions header.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {}
+}
