@@ -54,3 +54,10 @@ from believing a parameter was honored when it was not.
 - `serializeExtensions(list)` — serialize a list into a comma-joined header.
 - `selectDeflate(header)` — server-side: returns the response string or `null`.
 - `buildOffer(opts)` — client-side: builds a validated offer string.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
